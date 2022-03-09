@@ -25,9 +25,7 @@
         specialWord = specialWord.toUpperCase();
         var newString = myString.replace('really', specialWord);
         console.log("NewString: " + newString);
-
         console.log("============Using for loop================");
-
         var foods = ['cheese', 'pie', 'breakfast', 'lunch'];
         for (var i = 0; i < foods.length; i++) {
             console.log(`${myString} ${foods[i]}`);
@@ -36,7 +34,6 @@
         for (var eachFood of foods) {
             console.log(`${myString} ${eachFood}`);
         }
-
         console.log("============Loop Even toUpperCase================");
         for (var i = 0; i < foods.length; i++) {
             if (i % 2 === 0) {
