@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Working with Arrays and Sequence, Selection and Loop</h1>
+
+    <script>
+        var myString = "I am really hungry for some";
+        console.log("myString: " + myString);
+        console.log("============To Uppercase================");
+        var myUpperString = myString.toUpperCase();
+        console.log("myString: " + myString);
+        console.log("myUpperString: " + myUpperString);
+        var reallyLocation = myString.search('really');
+        console.log("reallyLocation: " + reallyLocation);
+        var specialWord = myString.substr(reallyLocation, 6);
+        console.log(specialWord);
+        specialWord = specialWord.toUpperCase();
+        var newString = myString.replace('really', specialWord);
+        console.log("NewString: " + newString);
+
+        console.log("============Using for loop================");
+
+        var foods = ['cheese', 'pie', 'breakfast', 'lunch'];
+        for (var i = 0; i < foods.length; i++) {
+            console.log(`${myString} ${foods[i]}`);
+        }
+        console.log("============Using for each loop================");
+        for (var eachFood of foods) {
+            console.log(`${myString} ${eachFood}`);
+        }
+
+        console.log("============Loop Even toUpperCase================");
+        for (var i = 0; i < foods.length; i++) {
+            if (i % 2 === 0) {
+                console.log(`${myString} ${foods[i].toUpperCase()}`);
+            } else {
+                console.log(`${myString} ${foods[i]}`);
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
