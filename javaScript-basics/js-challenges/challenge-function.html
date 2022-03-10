@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Challenges</title>
+</head>
+
+<body>
+    <h1>Functions</h1>
+    <h2>Challenge 10</h2>
+    <p>Write a function called hello() that outputs a
+        greeting in the console when the function
+        runs.</p>
+    <h2>Challenge 11</h2>
+    <p> change hello() so that it
+        takes a parameter, and when you run the
+        function, you pass in the name of a person
+        and the function outputs the greeting to the
+        console.</p>
+    <h2>Challenge 12</h2>
+    <p>add a prompt requesting the user
+        for their name, and assign the result to a
+        variable.<br />
+        Then pass that variable into the hello()
+        function so that the console greets the person
+        by name</p>
+    <h2>Challenge 13</h2>
+    </p>handle the situation that
+    happens if the user clicks cancel on the
+    prompt, or does not enter text in the prompt.
+    If the user does one of those two actions,
+    have the hello() function log to the console
+    "You didn't give me your name". Otherwise,
+    have the console log the greeting</p>
+    <h2>Challenge 14</h2>
+    <p>update the hello() function
+        so that it returns a value rather than outputs
+        directly to the console.
+        I used a variable: var greeting; and returned
+        that variable at the end of the function.
+        Then outside the function write a call to the
+        console that logs the greeting returned by the
+        function.</p>
+    <h2>Challenge 15</h2>
+    <p>add an array of foods and
+        put 3-5 elements in the array. Then make a
+        new function called hospitality(); after the
+        hello(); function.
+        The new function will take two parameters, a
+        name and a gift, which will be an array. Have
+        this function run the hello() function and
+        output the result to the console. Then have it
+        loop through the gift array and offer a gift to
+        the visitor by name and output that to the
+        console.</p>
+    <h2>Challenge 16</h2>
+    <p>add the function that gets
+        random integers from the functions lecture.
+        Update the hospitality() function so that,
+        instead of looping through the whole array,
+        randomly picks one element from the array
+        and offers that to the user.</p>
+    <script>
+        //======Challenge 10 & 11=============
+        function hello(name) {
+            var greeting;
+            if (name == null || name == '') {//======Challenge 13=============
+                //console.log("You didn't give me a name!");
+                greeting = "You didn't give me a name!";
+            } else {
+                //console.log(`Hello ${name}, and welcome!`);
+                greeting = `Hello ${name}, and welcome!`;
+            }
+            //======Challenge 14=============
+            return greeting;
+        }
+        //======Challenge 12=============
+        var yourName = prompt('What is your name?', '');
+        var food = ['cheese', 'frouts', 'chicken', 'dessert', 'candy'];
+
+        function hospitality(name, gift) {
+            console.log(hello(name));
+            /*  //======Challenge 15=============
+            for (var i = 0; i < food.length; i++) {
+                 console.log(`${name}, would you lieke some ${food[i]}?`);
+             }
+             */
+            //======Challenge 16=============
+            var randomGift = gift[randomInt(0, gift.length - 1)];
+            console.log(`${name}, would you like some ${randomGift}?`)
+        }
+
+        function randomInt(min, max) {
+            return myRandomint = Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        hospitality(yourName, food);
+
+
+    </script>
+</body>
+
+</html>
