@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Functions</title>
+</head>
+
+<body>
+    <h1>Functions in JavaScript</h1>
+    <script>
+        // A simple function
+        function upperMessage() {
+            var upperString = myString.toUpperCase();
+            console.log(upperString);
+        }
+        var myString = "Here is a String of text";
+        console.log(myString);
+        upperMessage(myString); //Sting is upper case when the function is called
+        //A function that does an operation when it's called
+        function addNum(num1, num2) {
+            var sum = num1 + num2;
+            return sum;
+        }
+        console.log("Add Number: " + addNum(2, 3));
+        //A function generagtes a random number which result can be used for another function
+        function randomInt(min, max) {
+            /* 
+            var numOfValues = max - min + 1;
+            var randomNum = Math.random();
+            var randomVal = randomNum * numOfValues;
+            var roundedRandomVal = Math.floor(randomVal);
+            var finalNum = min + roundedRandomVal;
+            return finalNum;
+            */
+            //Refactor the function
+            return Math.floor((max - min + 1) * Math.random()) + min;
+
+        }
+        var food = ["cheese", "chicken", "grapes", "hamburgers"];
+
+        console.log(food[randomInt(0, 3)]);
+
+    </script>
+
+</body>
+
+</html>
